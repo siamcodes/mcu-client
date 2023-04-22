@@ -65,9 +65,9 @@ const Home = () => {
                     "Best Sellers"
                 ]} />
             </div>
-            <div className="container-fluid mt-1">
+            <div className="container-fluid">
                 <div className="row">
-                    <div className="col-md-2">
+                    <div className="col-md-3">
                         <a name="categories" />
                         <h5 className="text-center p-1 mt-1 mb-2 display-4 jumbotron">Categories</h5>
                         <ul className="list-group">
@@ -79,7 +79,7 @@ const Home = () => {
                             <SubList />
                         </ul>
                     </div>
-                    <div className="col-md-10">
+                    <div className="col-md-9">
                         <a name="new-arrivals" />
                         <h4 className="text-center p-1 mt-1 mb-1 display-3 jumbotron">New Arrivals</h4>
                         <NewArrivals />
