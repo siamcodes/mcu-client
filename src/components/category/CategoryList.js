@@ -20,7 +20,7 @@ const CategoryList = () => {
                     key={c._id}
                     className="list-group-item list-group-item-action"
                 >
-                    <Link to={`/category/${c.slug}`}>{c.name}</Link>
+                    <Link to={`/category/${c.slug}`}>{c.name}  </Link>
                 </li>
         ));
 

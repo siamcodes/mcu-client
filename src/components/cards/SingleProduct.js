@@ -125,12 +125,12 @@ const SingleProduct = ({ product, onStarClick, star }) => {
             <div className="row">
                 <div className="col-md-8">
                     <Tabs type="card">
-                        <TabPane tab="Description" key="1">
+                        <TabPane tab="รายละเอียดสินค้า" key="1">
                             <b style={{ color: 'blue' }}>{description && description}</b>
                             <br />
                             {content && content.length ? (<div className="content"> {renderHTML(content)} </div>) : (<div></div>)}
                         </TabPane>
-                        <TabPane tab="More" key="2">
+                        <TabPane tab="ตัวอย่างการใช้งาน" key="2">
                             {detail && detail.length ? (<div className="content"> {renderHTML(detail)} </div>) : (<div></div>)}
                         </TabPane>
                     </Tabs>
