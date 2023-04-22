@@ -31,11 +31,11 @@ const BestSellers = () => {
         <>
             <div className="container-fluid">
                 {loading ? (
-                    <LoadingCard count={8} />  //3
+                    <LoadingCard count={3} />  //3
                 ) : (
                         <div className="row">
                             {products.map((product) => (
-                                <div key={product._id} className=" col-md-4 col-lg-3 col-6 mt-3 p-1">
+                                <div key={product._id} className="col-lg-3 col-md-4 col-6 mt-3 p-1">
                                     <ProductCard product={product} />
                                 </div>
                             ))}
@@ -47,7 +47,7 @@ const BestSellers = () => {
                 <nav className="col-md-4 offset-md-4 text-center pt-5 p-3">
                     <Pagination
                         current={page}
-                        total={(productsCount / 8) * 10}  //3*10
+                        total={(productsCount / 12) * 10}  //3*10
                         onChange={(value) => setPage(value)}
                     />
                 </nav>

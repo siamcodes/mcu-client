@@ -56,7 +56,7 @@ const CategoryHome = ({ match }) => {
 
                     <div className="row">
                         {products.map((p) => (
-                            <div className="col-3" key={p._id}>
+                            <div className="col-lg-3 col-md-4 col-6" key={p._id}>
                                 <ProductCard product={p} />
                             </div>
                         ))}

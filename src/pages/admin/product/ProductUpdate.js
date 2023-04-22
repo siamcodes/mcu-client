@@ -288,19 +288,19 @@ const ProductUpdate = ({ match, history }) => {
                     <div className="pt-4">
                         <ReactQuill theme="snow" value={content} onChange={handleContent} />
                         <Button className="mt-2" onClick={saveContentToDB} type="primary" ghost>
-                            บันทึก Description
+                            บันทึกรายละเอียดคุณสมบัติ
                         </Button>
                     </div>
 
                     <div className="pt-4">
                         <ReactQuill theme="snow" value={detail} onChange={handleDetail} />
                         <Button className="mt-2" onClick={saveDetailToDB} type="primary" ghost>
-                            บันทึก More
+                            บันทึกตัวอย่างการใช้งาน
                         </Button>
                     </div>
 
-                    <Link to={`/admin/product-content/${slug}`} className="btn btn-primary"> เพิ่ม Description </Link>
-                    <Link to={`/admin/product-detail/${slug}`} className="btn btn-primary">เพิ่ม More</Link>
+                    <Link to={`/admin/product-content/${slug}`} className="btn btn-primary"> คลิกเพิ่มรายละเอียดคุณสมบัติ </Link>
+                    <Link to={`/admin/product-detail/${slug}`} className="btn btn-primary">คลิกเพิ่มตัวอย่างการใช้งาน</Link>
                     <br />
                 </div>
             </div>

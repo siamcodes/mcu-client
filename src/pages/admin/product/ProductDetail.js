@@ -82,7 +82,7 @@ const ProductDetail = ({ match, history }) => {
                     {loading ? (
                         <LoadingOutlined className="text-danger h1" />
                     ) : (
-                        <h4>Product More</h4>
+                        <h4>ตัวอย่างการใช้งาน</h4>
                     )}
 
                     <form>

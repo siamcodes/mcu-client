@@ -10,7 +10,6 @@ import {
     getUserAddress
 } from "../functions/user";
 import { Button } from 'antd';
-
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
@@ -100,7 +99,7 @@ const Checkout = ({ history }) => {
 
     const showAddress = () => (
         <>
-            <ReactQuill theme="snow" value={address} onChange={setAddress} />
+            <ReactQuill theme="snow" value={address} onChange={setAddress} row="3" />
             <Button className="mt-2" onClick={saveAddressToDb} type="primary" ghost>
                 Save
             </Button>

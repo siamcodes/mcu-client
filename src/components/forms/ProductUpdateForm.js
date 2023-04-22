@@ -212,7 +212,7 @@ const ProductUpdateForm = ({
                 </div>
 
                 <div className="form-group">
-                    <label>Description</label>
+                    <label>รายละเอียดสินค้า</label>
                     <textarea
                         rows="5"
                         type="text"

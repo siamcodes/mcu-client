@@ -16,12 +16,12 @@ const CategoryList = () => {
 
     const showCategories = () =>
         categories.map((c) => (
-                <li
+                <div
                     key={c._id}
                     className="list-group-item list-group-item-action"
                 >
                     <Link to={`/category/${c.slug}`}>{c.name}  </Link>
-                </li>
+                </div>
         ));
 
     return (

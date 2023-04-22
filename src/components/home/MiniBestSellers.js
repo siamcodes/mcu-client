@@ -47,7 +47,7 @@ const MiniBestSellers = () => {
                 <nav className="offset-md-4 text-center pt-2 p-3">
                     <Pagination
                         current={page}
-                        total={(productsCount / 3) * 6}  //3*10
+                        total={(productsCount / 3) * 10}  //3*10
                         onChange={(value) => setPage(value)}
                     />
                 </nav>

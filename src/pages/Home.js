@@ -70,22 +70,22 @@ const Home = () => {
                     <div className="col-md-3">
                         <a name="categories" />
                         <h5 className="text-center p-1 mt-1 mb-2 display-4 jumbotron">Categories</h5>
-                        <ul className="list-group">
+                        <div className="list-group">
                             <CategoryList />
-                        </ul>
+                        </div>
 
-                        <h4 className="text-center p-1 mt-1 mb-2 display-5 jumbotron">Sub Categories</h4>
-                        <ul className="list-group">
+                        <h4 className="text-center p-1 mt-1 mb-2 display-4 jumbotron">Sub Categories</h4>
+                        <div className="list-group">
                             <SubList />
-                        </ul>
+                        </div>
                     </div>
                     <div className="col-md-9">
                         <a name="new-arrivals" />
-                        <h4 className="text-center p-1 mt-1 mb-1 display-3 jumbotron">New Arrivals</h4>
+                        <h4 className="text-center p-1 mt-1 mb-1 display-4 jumbotron">New Arrivals</h4>
                         <NewArrivals />
 
                         <a name="best-sellers" />
-                        <h4 className="text-center p-1 mt-1 mb-1 display-3 jumbotron">Best Sellers</h4>
+                        <h4 className="text-center p-1 mt-1 mb-1 display-4 jumbotron">Best Sellers</h4>
                         <BestSellers />
                     </div>
                 </div>

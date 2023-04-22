@@ -35,7 +35,7 @@ const NewArrivals = () => {
                 ) : (
                         <div className="row">
                             {products.map((product) => (
-                                <div key={product._id} className=" col-lg-3 col-md-4 col-sm-6 mt-3 p-1">
+                                <div key={product._id} className=" col-lg-3 col-md-4 col-6 mt-3 p-1">
                                     <ProductCard product={product} />
                                 </div>
                             ))}
@@ -44,7 +44,7 @@ const NewArrivals = () => {
             </div>
 
             <div className="row">
-                <nav className="col-md-4 offset-md-4 text-center pt-5 p-3">
+                <nav className="col-md-4 offset-md-4 text-center pt-3 p-3">
                     <Pagination
                         current={page}
                         total={(productsCount / 12) * 10}   //3*10
