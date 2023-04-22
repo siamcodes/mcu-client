@@ -135,10 +135,10 @@ const SingleProduct = ({ product, onStarClick, star }) => {
                         </TabPane>
                     </Tabs>
                 </div>
-                <div className="col-md-4">
+                {/* <div className="col-md-4">
                     <h4 className="text-center p-3 mt-2 mb-2 display-4 jumbotron">Best Sellers</h4>
                     <MiniBestSellers />
-                </div>
+                </div> */}
             </div>
         </div>
     );

@@ -35,7 +35,7 @@ const MiniBestSellers = () => {
                 ) : (
                         <div className="row">
                             {products.map((product) => (
-                                <div key={product._id} className="col-sm-6 mt-3 p-1">
+                                <div key={product._id} className="col-lg-6 mt-3 p-1">
                                     <ProductCard product={product} />
                                 </div>
                             ))}
