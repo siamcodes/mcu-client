@@ -56,26 +56,30 @@ const Home = () => {
         <div>
             <div className="jumbotron text-danger h1 font-weight-bold text-center">
                 <Jumbotron text={[
-                    "จำหน่ายอุปกรณ์อิเล็กทรอนิกส์", 
+                    "จำหน่ายอุปกรณ์อิเล็กทรอนิกส์",
                     "ไมโครคอนโทรลเลอร์ / สมองกลฝังตัว / Sensor",
                     "Internet of Things / Arduino / ESP32 / ESP8266",
                     "สินค้าโกดังในไทย ส่งถึงลูกค้าภายใน 1-3 วัน",
-                    "Latest Products", 
-                    "New Arrivals", 
+                    "Latest Products",
+                    "New Arrivals",
                     "Best Sellers"
-                    ]} />
+                ]} />
             </div>
-            <div className="container-fluid">
+            <div className="container-fluid mt-1">
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-2">
                         <a name="categories" />
                         <h5 className="text-center p-1 mt-1 mb-2 display-4 jumbotron">Categories</h5>
-                        <CategoryList />
+                        <ul className="list-group">
+                            <CategoryList />
+                        </ul>
 
-                        <h4 className="text-center p-1 mt-1 mb-2 display-4 jumbotron">Sub Categories</h4>
-                        <SubList />
+                        <h4 className="text-center p-1 mt-1 mb-2 display-5 jumbotron">Sub Categories</h4>
+                        <ul className="list-group">
+                            <SubList />
+                        </ul>
                     </div>
-                    <div className="col-md-9">
+                    <div className="col-md-10">
                         <a name="new-arrivals" />
                         <h4 className="text-center p-1 mt-1 mb-1 display-3 jumbotron">New Arrivals</h4>
                         <NewArrivals />

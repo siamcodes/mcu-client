@@ -16,12 +16,12 @@ const CategoryList = () => {
 
     const showCategories = () =>
         categories.map((c) => (
-            <div
-                key={c._id}
-                className="col btn btn-outlined-primary btn-sm btn-block btn-raised"
-            >
-                <Link to={`/category/${c.slug}`}>{c.name}</Link>
-            </div>
+                <li
+                    key={c._id}
+                    className="list-group-item list-group-item-action"
+                >
+                    <Link to={`/category/${c.slug}`}>{c.name}</Link>
+                </li>
         ));
 
     return (
@@ -30,8 +30,8 @@ const CategoryList = () => {
                 {loading ? (
                     <h4 className="text-center">Loading...</h4>
                 ) : (
-                        showCategories()
-                    )}
+                    showCategories()
+                )}
             </div>
         </div>
     );

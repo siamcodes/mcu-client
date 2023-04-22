@@ -20,7 +20,7 @@ const Footer = () => {
             <footer className="text-lg-start bg-light text-muted">
                 <section className="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
                     <div className="d-none d-lg-block">
-                        <span style={{fontSize:"20px"}}>ติดตามเราทางช่องทาง social network:</span>
+                        <span style={{fontSize:"20px"}}>mcu.in.th</span>
                     </div>
                     <div>
                         <a href style={{ color: "#3498DB", paddingLeft: "10px", fontSize:"24px" }}>

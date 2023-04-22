@@ -35,7 +35,7 @@ const NewArrivals = () => {
                 ) : (
                         <div className="row">
                             {products.map((product) => (
-                                <div key={product._id} className="col-md-3 col-6 mt-3 p-1">
+                                <div key={product._id} className=" col-lg-3 col-md-4 col-sm-6 mt-3 p-1">
                                     <ProductCard product={product} />
                                 </div>
                             ))}
