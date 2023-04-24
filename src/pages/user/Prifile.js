@@ -47,7 +47,7 @@ const Profile = () => {
         });
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid mt-3">
             <div className="row">
                 <div className="col-md-2">
                     <UserNav />

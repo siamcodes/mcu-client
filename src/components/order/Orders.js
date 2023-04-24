@@ -8,6 +8,7 @@ const Orders = ({ orders, handleStatusChange }) => {
     <table className="table table-bordered table-responsive">
       <thead className="thead-light">
         <tr>
+          <th scope="col">IMG</th>
           <th scope="col">Title</th>
           <th scope="col">Price</th>
           <th scope="col">Brand</th>
@@ -20,6 +21,13 @@ const Orders = ({ orders, handleStatusChange }) => {
       <tbody>
         {order.products.map((p, i) => (
           <tr key={i}>
+            <td>
+              <img
+                src={p.product.images && p.product.images.length ? p.product.images[0].url : p.product.NoImg}
+                style={{ maxWidth: "50px", objectFit: "cover" }}
+                className="p-1"
+              />
+            </td>
             <td>{p.product.title}</td>
             <td>{p.product.price}</td>
             <td>{p.product.brand}</td>
@@ -46,8 +54,8 @@ const Orders = ({ orders, handleStatusChange }) => {
             <ShowPaymentInfo order={order} showStatus={false} />
 
             <div className="row">
-              <div className="col-sm-3">Delivery Status</div>
-              <div className="col-sm-9">
+              <div className="col-sm-2"><div style={{ fontSize: 18 }}>สถานะการสั่งซื้อ</div></div>
+              <div className="col-sm-10">
                 <select
                   onChange={(e) => handleStatusChange(order._id, e.target.value)}
                   className="form-control"
