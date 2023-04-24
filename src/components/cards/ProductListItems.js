@@ -17,7 +17,7 @@ const ProductListItems = ({ product }) => {
         <ul className="list-group list-group-flush">
             <li className="list-group-item d-flex justify-content-between align-items-center">
                 Price{" "}
-                <span>
+                <span style={{color:"#FF6600", fontWeight:"bold"}}>
                     ฿{price}
                 </span>
             </li>

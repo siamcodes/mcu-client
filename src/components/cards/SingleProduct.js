@@ -86,7 +86,7 @@ const SingleProduct = ({ product, onStarClick, star }) => {
                 </div>
 
                 <div className="col-sm-4">
-                    <h5 className="bg-secondary text-white p-3" style={{ borderRadius: "10px" }}>{title}</h5>
+                    <h5 className="text-white p-3" style={{ backgroundColor:"#5500FF" ,borderRadius: "10px" }}>{title}</h5>
 
                     {product && product.ratings && product.ratings.length > 0 ? (
                         showAverage(product)
