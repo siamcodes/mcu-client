@@ -63,7 +63,7 @@ const Profile = () => {
                                 <div className="card-body">
                                     <h5 className="card-title">{user.name}</h5>
                                     <p className="card-text">{profile.email}</p>
-                                    <p className="card-text">{renderHTML(profile.address)}</p>
+                                    {/* <p className="card-text">{renderHTML(profile.address)}</p> */}
                                     <p className="card-text"><small className="text-muted">{profile.createdAt}</small></p>
                                 </div>
                             </div>
