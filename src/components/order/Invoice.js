@@ -22,7 +22,7 @@ const Invoice = ({ order }) => (
                 ~ {new Date().toLocaleString()} ~
             </Text>
             <Text style={styles.title}>Order Invoice</Text>
-            <Text style={styles.author}>React Redux Ecommerce</Text>
+            <Text style={styles.author}>Ecommerce</Text>
             <Text style={styles.subtitle}>Order Summary</Text>
             <Table>
                 <TableHeader>
@@ -65,7 +65,7 @@ const Invoice = ({ order }) => (
                 </Text>
             </Text>
 
-            <Text style={styles.footer}> ~ Thank you for shopping with us ~ </Text>
+            <Text style={styles.footer}> ~ ขอบคุณที่ใช้บริการค่ะ ~ </Text>
         </Page>
     </Document>
 );
