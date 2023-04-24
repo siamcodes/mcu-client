@@ -416,14 +416,14 @@ const Shop = () => {
                     {loading ? (
                         <h4 className="text-danger">Loading...</h4>
                     ) : (
-                        <h4>Products</h4>
+                        <h4>Products ({products.length})</h4>
                     )}
 
                     {products.length < 1 && <p>No products found</p>}
 
                     <div className="row pb-5">
                         {products.map((p) => (
-                            <div key={p._id} className="col-md-3 col-6 mt-3 p-1">
+                            <div key={p._id} className="col-lg-3 col-md-4 col-sm-6 mt-3 p-1">
                                 <ProductCard product={p} />
                             </div>
                         ))}

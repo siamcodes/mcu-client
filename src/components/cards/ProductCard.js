@@ -90,11 +90,11 @@ const ProductCard = ({ product }) => {
                 <div>{`${title && title.substring(0, 40)}`}</div>
                 <div className="d-flex justify-content-center justify-content-between pt-2">
                     <div style={{ color: "#FF6600" }}>{`฿${price}`}</div>
-                    <div style={{ color: "#888888" }}>{product.sold < 1 ? "  " : `ขายแล้ว ${sold} ชิ้น`}</div>
+                    <div style={{ color: "#888888" }}>{product.sold < 1 ? "  " : `ขายแล้ว ${sold} ชิ้น`}</div> <br/>
                 </div>
 
                 <div className="d-flex justify-content-center justify-content-between pt-2">
-                    <div></div>
+                <div style={{ color: "#888888" }}> {product.quantity < 1? " ": `เหลือ ${quantity} ชิ้น `}</div>
                     {product && product.ratings && product.ratings.length > 0 ? (
                         showAverage(product)
                     ) : (

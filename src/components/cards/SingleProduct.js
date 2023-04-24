@@ -75,7 +75,7 @@ const SingleProduct = ({ product, onStarClick, star }) => {
     return (
         <div className="container-fluid">
             <div className="row">
-                <div className="col-sm-7">
+                <div className="col-sm-8">
                     {images && images.length ? (
                         <Carousel showArrows={true} autoPlay infiniteLoop>
                             {images && images.map((i) => <img src={i.url} key={i.public_id} />)}
@@ -85,7 +85,7 @@ const SingleProduct = ({ product, onStarClick, star }) => {
                     )}
                 </div>
 
-                <div className="col-sm-5">
+                <div className="col-sm-4">
                     <h5 className="bg-secondary text-white p-3" style={{ borderRadius: "10px" }}>{title}</h5>
 
                     {product && product.ratings && product.ratings.length > 0 ? (
