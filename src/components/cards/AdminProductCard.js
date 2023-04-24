@@ -33,7 +33,7 @@ const AdminProductCard = ({ product, handleRemove }) => {
                 title={`${title} - ฿${price}`}
                 description={`${description && description.substring(0, 40)}...`}
             /> */}
-            <div>{title}</div>
+            <div><Link to={`/product/${slug}`}> {title} </Link></div>
             <div className="d-flex justify-content-center justify-content-between pt-2">
                 <div style={{color:"#FF6600"}}>{`฿${price}`}</div>
                 <div style={{ color: "#888888" }}>{product.sold < 1 ? `${sold} Sold (${quantity} Qty)` : `${sold} Sold (${quantity} Qty)` }</div>
