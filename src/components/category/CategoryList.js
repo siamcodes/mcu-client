@@ -18,14 +18,14 @@ const CategoryList = () => {
         categories.map((c) => (
                 <div
                     key={c._id}
-                    className="list-group-item list-group-item-action"
+                    className="list-group-item list-group-item-action pt-2 pb-2"
                 >
-                    <Link to={`/category/${c.slug}`}>{c.name}  </Link>
+                    <Link to={`/category/${c.slug}`}>{c.name} </Link>
                 </div>
         ));
 
     return (
-        <div className="container">
+        <div className="container-fluid">
             <div className="row">
                 {loading ? (
                     <h4 className="text-center">Loading...</h4>

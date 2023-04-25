@@ -69,12 +69,12 @@ const Home = () => {
                 <div className="row">
                     <div className="col-md-3">
                         <a name="categories" />
-                        <h5 className="text-center p-1 mt-1 mb-2 display-4 jumbotron">Categories</h5>
+                        <h5 className="text-center p-1 mt-1 mb-2 display-5 jumbotron">Categories</h5>
                         <div className="list-group">
                             <CategoryList />
                         </div>
 
-                        <h4 className="text-center p-1 mt-1 mb-2 display-4 jumbotron">Sub Categories</h4>
+                        <h4 className="text-center p-1 mt-1 mb-2 display-5 jumbotron">Sub Categories</h4>
                         <div className="list-group">
                             <SubList />
                         </div>
