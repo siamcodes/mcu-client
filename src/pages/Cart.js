@@ -12,7 +12,7 @@ const Cart = ({ history }) => {
 
     const getShipping = () => {
         const shipping = 25;
-        return shipping;
+        return shipping.toFixed(2);
     }
 
     const getTax = () => {
@@ -25,13 +25,13 @@ const Cart = ({ history }) => {
 
     const getTotal = () => {
         return cart.reduce((currentValue, nextValue) => {
-            return currentValue + nextValue.count * nextValue.price;
+            return (currentValue + nextValue.count * nextValue.price).toFixed(2);
         }, 0);
     };
 
     const getNetprice = () => {
         let netprice = getTotal() + getTax() + getShipping();
-        return netprice;
+        return netprice.toFixed(2);
     }
 
     const saveOrderToDb = () => {
