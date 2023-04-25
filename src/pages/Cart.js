@@ -12,7 +12,14 @@ const Cart = ({ history }) => {
 
     const getTotal = () => {
         return cart.reduce((currentValue, nextValue) => {
-            return currentValue + nextValue.count * nextValue.price;
+
+            const vat = 0.07;
+            const shipping = 50;
+            let total = currentValue + nextValue.count * nextValue.price;
+            let vat_price = (currentValue + nextValue.count * nextValue.price)*vat;
+
+            return vat_price;
+            //return currentValue + nextValue.count * nextValue.price;
         }, 0);
     };
 
