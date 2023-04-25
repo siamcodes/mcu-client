@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import "antd/dist/antd.css";
 //import "bootstrap/dist/css/bootstrap.css"
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';

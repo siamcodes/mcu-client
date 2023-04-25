@@ -313,7 +313,7 @@ const Shop = () => {
                             key="1"
                             title={
                                 <span className="h6">
-                                    <DollarOutlined /> Price
+                                     <i class="bi bi-currency-bitcoin"></i> Price
                                 </span>
                             }
                         >
