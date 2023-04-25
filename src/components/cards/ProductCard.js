@@ -87,7 +87,7 @@ const ProductCard = ({ product }) => {
                     description={`${description && description.substring(0, 70)}...`}
                 /> */}
 
-                <div>{`${title && title.substring(0, 40)}`}</div>
+                <div className="text-wrap text-sm">{`${title && title.substring(0, 40)}`}</div>
                 <div className="d-flex justify-content-center justify-content-between pt-1">
                     <div style={{ color: "#FF6600", fontWeight: "bold" }}>{`฿${price}`}</div>
                     <div style={{ color: "#009900"}}>{product.sold < 1 ? "  " : `ขายแล้ว ${sold} ชิ้น`}</div>

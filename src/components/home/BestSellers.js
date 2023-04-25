@@ -44,7 +44,7 @@ const BestSellers = () => {
             </div>
 
             <div className="row">
-                <nav className="col-md-4 offset-md-4 text-center pt-5 p-3">
+                <nav className="col-md-9 offset-md-1 text-center pt-4 pb-4">
                     <Pagination
                         current={page}
                         total={(productsCount / 3) * 10}  //3*10
