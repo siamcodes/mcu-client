@@ -10,18 +10,29 @@ const Cart = ({ history }) => {
     const { cart, user } = useSelector((state) => ({ ...state }));
     const dispatch = useDispatch();
 
+    const getShipping = () => {
+        const shipping = 50;
+        return shipping;
+    }
+
+    const getTax = () => {
+        return cart.reduce((currentValue, nextValue) => {
+            const vat = 0.07;
+            let tax = (currentValue + nextValue.count * nextValue.price) * vat;
+            return tax;
+        }, 0);
+    }
+
     const getTotal = () => {
         return cart.reduce((currentValue, nextValue) => {
-
-            const vat = 0.07;
-            const shipping = 50;
-            let total = currentValue + nextValue.count * nextValue.price;
-            let vat_price = (currentValue + nextValue.count * nextValue.price)*vat;
-
-            return vat_price;
-            //return currentValue + nextValue.count * nextValue.price;
+            return currentValue + nextValue.count * nextValue.price;
         }, 0);
     };
+
+    const getNetprice = () => {
+        let netprice = getTotal() + getTax() + getShipping();
+        return netprice;
+    }
 
     const saveOrderToDb = () => {
         // alert("save order to db");
@@ -41,7 +52,7 @@ const Cart = ({ history }) => {
             type: "COD",
             payload: true,
         });
-        
+
         userCart(cart, user.token)
             .then((res) => {
                 console.log("CART POST RES", res);
@@ -98,7 +109,10 @@ const Cart = ({ history }) => {
                         </div>
                     ))}
                     <hr />
-                    Total: <b> ฿{getTotal()} </b>
+                    Total: <b> ฿{getTotal()} </b> <br/>
+                    Shipping: <b> ฿{getShipping()} </b><br />
+                    Tax: <b> ฿{getTax()} </b> <br/>
+                    Net Price: <b> ฿{getNetprice()} </b>
                     <hr />
                     {user ? (
                         <>
@@ -121,7 +135,7 @@ const Cart = ({ history }) => {
                             </Button>
                         </>
                     ) : (
-                        <Button className="mt-2"  type="primary" shape="round">
+                        <Button className="mt-2" type="primary" shape="round">
                             <Link
                                 to={{
                                     pathname: "/login",
