@@ -11,21 +11,21 @@ const Cart = ({ history }) => {
     const dispatch = useDispatch();
 
     const getShipping = () => {
-        const shipping = 25;
-        return shipping.toFixed(2);
+        const shipping = 30;
+        return shipping;
     }
 
     const getTax = () => {
         return cart.reduce((currentValue, nextValue) => {
             const vat = 0.07;
             let tax = (currentValue + nextValue.count * nextValue.price) * vat;
-            return tax.toFixed(2);
+            return tax;
         }, 0);
     }
 
     const getTotal = () => {
         return cart.reduce((currentValue, nextValue) => {
-            return (currentValue + nextValue.count * nextValue.price).toFixed(2);
+            return (currentValue + nextValue.count * nextValue.price);
         }, 0);
     };
 
