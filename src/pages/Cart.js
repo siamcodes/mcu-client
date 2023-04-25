@@ -12,7 +12,7 @@ const Cart = ({ history }) => {
 
     const getShipping = () => {
         const shipping = 30;
-        return shipping;
+        return parseFloat(shipping).toFixed(2);
     }
 
     const getTax = () => {
@@ -25,7 +25,7 @@ const Cart = ({ history }) => {
 
     const getTotal = () => {
         return cart.reduce((currentValue, nextValue) => {
-            return (currentValue + nextValue.count * nextValue.price);
+            return parseFloat(currentValue + nextValue.count * nextValue.price).toFixed(2);
         }, 0);
     };
 
