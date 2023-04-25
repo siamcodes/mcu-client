@@ -14,7 +14,7 @@ const Cart = ({ history }) => {
         const shipping = 25;
         return shipping.toFixed(2);
     }
-    
+
     const getTax = () => {
         return cart.reduce((currentValue, nextValue) => {
             const vat = 0.07;
@@ -30,7 +30,7 @@ const Cart = ({ history }) => {
     };
 
     const getNetprice = () => {
-        var netprice = getTotal() + getTax() + getShipping();
+        let netprice = getTotal() + getTax() + getShipping();
         return parseFloat(netprice).toFixed(2);;
     }
 
