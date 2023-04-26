@@ -109,10 +109,9 @@ const Cart = ({ history }) => {
                         </div>
                     ))}
                     <hr />
+                    Shipping: <b> Included</b><br />
+                    Tax: <b> Included </b> <br/>
                     Total: <b> ฿{getTotal()} </b> <br/>
-                    Shipping: <b> ฿{getShipping()} </b><br />
-                    Tax: <b> ฿{getTax()} </b> <br/>
-                    Net Price: <b> ฿{getNetprice()} </b>
                     <hr />
                     {user ? (
                         <>
