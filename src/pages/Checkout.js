@@ -110,7 +110,7 @@ const Checkout = ({ history }) => {
         products.map((p, i) => (
             <div key={i}>
                 <p>
-                    {i + 1}. {p.product.title} ({p.color}) x {p.count} ={" ฿"}
+                    {p.product.title} ({p.color}) x {p.count} ={" ฿"}
                     {p.product.price * p.count}
                 </p>
             </div>

@@ -15,7 +15,7 @@ const ProductListItems = ({ product }) => {
 
     return (
         <ul className="list-group list-group-flush">
-            <li className="list-group-item d-flex justify-content-between align-items-center">
+            <li className="list-group-item d-flex justify-content-between align-items-center ms-1">
                 Price{" "}
                 <span style={{color:"#FF6600", fontWeight:"bold"}}>
                     ฿{price}
@@ -35,15 +35,17 @@ const ProductListItems = ({ product }) => {
 
             {subs && (
                 <li className="list-group-item d-flex justify-content-between align-items-center">
-                    Sub Categories
+                    Sub Categories{" "}
+                    <>
                     {subs.map((s) => (
                         <Link
                             key={s._id}
                             to={`/sub/${s.slug}`}
                         >
-                            {s.name}
+                            {s.name} {`, `}
                         </Link>
                     ))}
+                    </>
                 </li>
             )}
 

@@ -116,6 +116,8 @@ const SingleProduct = ({ product, onStarClick, star }) => {
                                 />
                             </RatingModal>,
                         ]}
+
+                        size="small"
                     >
                         {/*  <Meta description={description} /> */}
                         <ProductListItems product={product} />
