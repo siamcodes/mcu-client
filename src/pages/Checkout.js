@@ -193,6 +193,8 @@ const Checkout = ({ history }) => {
                 <hr />
                 {showProductSummary()}
                 <hr />
+                <p>Shipping: <b>Included</b></p>
+                <p>Tax: <b>Included</b></p>
                 <p>Cart Total: <b>฿{total}</b></p>
                 {totalAfterDiscount > 0 && (
                     <p className="bg-success text-white p-2">
