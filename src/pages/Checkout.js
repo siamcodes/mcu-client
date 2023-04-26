@@ -99,7 +99,7 @@ const Checkout = ({ history }) => {
 
     const showAddress = () => (
         <>
-            <ReactQuill theme="snow" value={address} onChange={setAddress} row="3" />
+            <ReactQuill theme="snow" value={address} onChange={setAddress} />
             <Button className="mt-2" onClick={saveAddressToDb} type="primary" ghost>
                 Save
             </Button>
@@ -193,9 +193,9 @@ const Checkout = ({ history }) => {
                 <hr />
                 {showProductSummary()}
                 <hr />
-                <p>Shipping: <b>Included</b></p>
-                <p>Tax: <b>Included</b></p>
-                <p>Cart Total: <b>฿{total}</b></p>
+                <p>Shipping: <b>Included</b><br />
+                    Tax: <b>Included</b><br />
+                    Cart Total: <b>฿{total}</b></p>
                 {totalAfterDiscount > 0 && (
                     <p className="bg-success text-white p-2">
                         Discount Applied: Total Payable: ฿{totalAfterDiscount}
