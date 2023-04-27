@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import ModalImage from "react-modal-image";
+import laptop from "../../images/noimg.jpg";
 import { Card } from 'antd'
 import UserNav from "../../components/nav/UserNav";
 import { getUserOrders } from "../../functions/user";
 import { useSelector, useDispatch } from "react-redux";
 import { CheckCircleOutlined, CloseCircleOutlined } from "@ant-design/icons";
-import { toast } from "react-toastify";
+//import { toast } from "react-toastify";
 import ShowPaymentInfo from "../../components/cards/ShowPaymentInfo";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import Invoice from "../../components/order/Invoice";
@@ -27,6 +29,7 @@ const History = () => {
     <table className="table table-bordered table-responsive">
       <thead className="thead-light">
         <tr>
+          <th>Image</th>
           <th scope="col">Title</th>
           <th scope="col">Price</th>
           <th scope="col">Brand</th>
@@ -39,6 +42,15 @@ const History = () => {
       <tbody>
         {order.products.map((p, i) => (
           <tr key={i}>
+            <td>
+              <div style={{ width: "100px", height: "auto" }}>
+                {p.images.length ? (
+                  <ModalImage small={p.images[0].url} large={p.images[0].url} />
+                ) : (
+                  <ModalImage small={laptop} large={laptop} />
+                )}
+              </div>
+            </td>
             <td>{p.product.title}</td>
             <td>{p.product.price}</td>
             <td>{p.product.brand}</td>
