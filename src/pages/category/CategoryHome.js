@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { getCategory } from "../../functions/category";
+import { getCategory, getCategories } from "../../functions/category";
 //import { Link } from "react-router-dom";
 import ProductCard from "../../components/cards/ProductCard";
 
-//import CategoryList from "../../components/category/CategoryList";
-//import SubList from "../../components/sub/SubList";
-
 const CategoryHome = ({ match }) => {
+    const [categories, setCategories] = useState([]);   // 
     const [category, setCategory] = useState({});
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -22,24 +20,41 @@ const CategoryHome = ({ match }) => {
             setLoading(false);
         });
 
+        getCategories().then((c) => {
+            setCategories(c.data);
+            setLoading(false);
+        });
 
     }, []);
+
+    const showCategories = () =>
+        categories.map((c) => (
+            <div
+                key={c._id}
+                className="list-group-item list-group-item-action pt-2 pb-2"
+            >
+                <a href={`/category/${c.slug}`}>{c.name}</a>
+            </div>
+        ));
 
     return (
         <div className="container-fluid">
             <div className="row">
-                <div className="col-md-3">
-                    {/* <h5 className="text-center p-1 mt-1 mb-2 display-4 jumbotron">Categories</h5>
-                    <ul className="list-group">
-                        <CategoryList />
-                    </ul>
-
-                    <h4 className="text-center p-1 mt-1 mb-2 display-5 jumbotron">Sub Categories</h4>
-                    <ul className="list-group">
-                        <SubList />
-                    </ul> */}
+                <div className="col-md-2">
+                    <h5 className="text-center p-1 mt-2 mb-2 display-5 jumbotron">Categories</h5>
+                    <div className="container-fluid">
+                        
+                        <div className="row">
+                            {loading ? (
+                                <h4 className="text-center">Loading...</h4>
+                            ) : (
+                                showCategories()
+                            )}
+                        </div>
+                    </div>
                 </div>
-                <div className="col-md-9">
+
+                <div className="col-md-10">
                     <div className="row">
                         <div className="col">
                             {loading ? (
@@ -47,8 +62,9 @@ const CategoryHome = ({ match }) => {
                                     Loading...
                                 </h4>
                             ) : (
-                                <h4 className="text-center p-3 mt-2 mb-2 display-5 jumbotron">
-                                    {products.length} Products in "{category.name}" category
+                                <h4 className="p-3 mt-2 mb-2 display-5 jumbotron">
+                                    ประเภทสินค้า : <span className="text-danger">{category.name}</span> {' '}
+                                    จำนวนสินค้า :  {products.length}
                                 </h4>
                             )}
                         </div>
