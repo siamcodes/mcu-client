@@ -1,0 +1,69 @@
+.slider img, 
+.card-image {
+    max-height: 540px;
+    object-fit: scale-down; 
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 576) and (max-width: 768) and (max-width: 992) and (max-width: 1200px) and (max-width: 1400px)  {
+    .content img{
+        max-width: 100%;
+        height: auto;
+    }    
+    .ql-video{
+        width: 100%;
+        height: 360px;
+    }
+}
+
+.content img{
+    max-width: 100%;
+    max-height: 480px; 
+}
+
+
+.ql-video{
+    width: 480px;
+    height: 270px;
+}
+.ql-editor {
+    min-height: 300px;
+}
+
+pre {
+    background-color: #e6e6e6;
+    padding: 10px ;
+    font-size: 1.1em;
+    border-radius: 10px;
+}
+
+/* blockquote */
+blockquote {
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+  }
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+blockquote:after {
+    color: #ccc;
+    content: close-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+blockquote p {
+    display: inline;
+  }
